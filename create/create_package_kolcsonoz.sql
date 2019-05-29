@@ -15,9 +15,9 @@ create or replace package kolcsonozPackage as
     pMasodikKezd Kolcsonzesek.DatumKi%TYPE,
     pMasodikVeg Kolcsonzesek.DatumVissza%TYPE
   ) return number;
-  --Visszaterit egy szabad DVD-t, amin rajta van az adott film es nincs kikolcsonozve az adott periodusban
+  --Visszaterit egy szabad könyvet, amin rajta van az adott könyv es nincs kikolcsonozve az adott periodusban
   function szabadKonyvek(
-    pFilmId Konyvek.KonyvId%TYPE,
+    pKonyvId Konyvek.KonyvId%TYPE,
     pDatumKi Kolcsonzesek.DatumKi%TYPE,
     pDatumVissza Kolcsonzesek.DatumVissza%TYPE
   ) return number;
