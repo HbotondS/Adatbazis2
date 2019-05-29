@@ -8,7 +8,8 @@ CREATE TABLE Konyvek(
  Kcim varchar2(30),
  Kiado varchar2(30),
  MufajID number(3) references Mufajok(MufajID),
- ISBN number(3,1)
+ ISBN number(13),
+ NapiAr number(3, 1)
 );
 
 CREATE TABLE Kolcsonzo(
