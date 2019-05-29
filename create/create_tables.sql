@@ -3,9 +3,16 @@ CREATE TABLE Mufajok(
  MufajNev varchar2(30)
 );
 
+CREATE TABLE Irok(
+ IroID number(3) primary key,
+ Inev varchar2(20),
+ ITelefon varchar2(10)
+);
+
 CREATE TABLE Konyvek(
  KonyvID number(3)  primary key,
  Kcim varchar2(30),
+ Ido number(3) references Irok(IroID),
  Kiado varchar2(30),
  MufajID number(3) references Mufajok(MufajID),
  ISBN number(13),
@@ -26,10 +33,4 @@ CREATE TABLE Kolcsonzesek(
  DatumVissza date, 
  Ertek int,
  Primary key(KID, KonyvID, DatumKi)
-);
-
-CREATE TABLE Irok(
-    IroID number(3) primary key,
-    Inev varchar2(20),
-    ITelefon varchar2(10)
 );
