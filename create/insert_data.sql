@@ -40,7 +40,7 @@ VALUES (5, 'Galaxis utikalauz stopposoknak', 'Gabo ', 3, '3658456488853', 3, 5);
 INSERT INTO Kolcsonzo
 VALUES (1, 'Szilagyi Jeno', 'Kolozsvar, Scortarilor 79', '0732067895');
 INSERT INTO Kolcsonzo
-VALUES (2, 'Andras Mihaly', 'Marosvasarhely, Gr. Alexandrescu 5', '0264435672');
+VALUES (2, 'Andras Mihaly', 'Marosvasarhely, Tudor 5', '0264435672');
 INSERT INTO Kolcsonzo
 VALUES (3, 'Kiraly Lorand', 'Marosvasarhely, Unirii 1', '0264789678');
 INSERT INTO Kolcsonzo
