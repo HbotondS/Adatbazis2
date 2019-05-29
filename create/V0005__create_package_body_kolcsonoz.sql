@@ -116,7 +116,7 @@ create or replace package body kolcsonozPackage as
   is
     lErtek Kolcsonzesek.Ertek%TYPE;
   begin
-    select (pDatumVissza - pDatumKi) * napiar into lErtek from Konyvek where Konyvid = pKonyvId;
+    select (pDatumVissza - pDatumKi) * NapiAr into lErtek from Konyvek where Konyvid = pKonyvId;
     insert into kolcsonzesek values(pKId, pKonyvId, pDatumKi, pDatumVissza, lErtek);
     dbms_output.put_line('Sikeresen beszurt a kolcsonzes tablaba');
   end beszurKolcsonzes;
