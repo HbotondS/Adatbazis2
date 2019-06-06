@@ -18,7 +18,7 @@ CREATE TABLE Konyvek
     Kiado   varchar2(30),
     Iro     number(3) references Irok (IroID),
     ISBN    varchar2(13),
-    MufajID number(3) references Mufajok (MufajID),
+    Mufajok   varchar2(60),
     NapiAr  number(3, 1)
 );
 

@@ -25,15 +25,15 @@ VALUES (3, 'G. R. R. Martin', '0732064546');
 --------------------------------Konyvek----------------------------------
 
 INSERT INTO Konyvek
-VALUES (1, 'Vajak', 'Play ON', 1, '3658123654798', 4, 3);
+VALUES (1, 'Vajak', 'Play ON', 1, '3658123654798', 'fantasy', 3);
 INSERT INTO Konyvek
-VALUES (2, 'Tronok harca', 'Alexandra', 2, '3658123654468', 4, 5);
+VALUES (2, 'Tronok harca', 'Alexandra', 2, '3658123654468', 'fantasy', 5);
 INSERT INTO Konyvek
-VALUES (3, 'Az Ehezok Viadala', 'Agave', 3, '4568646156024', 3, 4);
+VALUES (3, 'Az Ehezok Viadala', 'Agave', 3, '4568646156024', 'Sci-fi', 4);
 INSERT INTO Konyvek
-VALUES (4, 'Az Utveszto', 'Cartaphilus', 1, '4548424548228', 2, 4);
+VALUES (4, 'Az Utveszto', 'Cartaphilus', 1, '4548424548228', 'regeny', 4);
 INSERT INTO Konyvek
-VALUES (5, 'Galaxis utikalauz stopposoknak', 'Gabo ', 3, '3658456488853', 3, 5);
+VALUES (5, 'Galaxis utikalauz stopposoknak', 'Gabo ', 3, '3658456488853', 'Sci-fi', 5);
 
 ----------------------------------Kolcsonzo---------------------------------
 
