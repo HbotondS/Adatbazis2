@@ -1,4 +1,6 @@
 create or replace package body updateMufaj as
+    -- Beszur egy uj mufajt, ha meg nem letezik, es updateli a megadott konyveket
+    -- Visszateritesi ertekek: 1 ha sikerult, hanem 0
     function updateKonyvek(pMufajNev Mufajok.MufajNev%TYPE,
                            konyvIDs konyvekLista) return number
     is
@@ -33,6 +35,7 @@ create or replace package body updateMufaj as
             return 0;
     end updateKonyvek;
 
+    -- Beszur egy uj mufajt
     procedure insertMufaj(pMufajNev Mufajok.MufajNev%TYPE,
                           outMufajID out Mufajok.MufajID%TYPE)
     is
@@ -41,6 +44,7 @@ create or replace package body updateMufaj as
         values ((select max(MufajID) + 1 from Mufajok), pMufajNev) returning MufajID into outMufajID;
     end insertMufaj;
 
+    -- Ellenorzi, hogy letezik-e az adott konyv
     function ellenorizKonyv(pKonyvID Konyvek.KonyvID%TYPE) return number
     is
         lLetezikKonyv number;

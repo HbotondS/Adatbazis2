@@ -1,11 +1,11 @@
 create or replace package kolcsonozPackage as
     -- Elvegez egy kolcsonzest az elejetol a vegeig
-    function kolcsonoz(pKonyvID Konyvek.KonyvId%TYPE,
+    /*function kolcsonoz(pKonyvID Konyvek.KonyvId%TYPE,
                        pKolcsonzoNev Kolcsonzo.Nev%TYPE,
                        pKCim Kolcsonzo.Cim%TYPE,
                        pKTel Kolcsonzo.Telefon%TYPE,
                        pDatumKi Kolcsonzesek.DatumKi%TYPE,
-                       pDatumVissza Kolcsonzesek.DatumVissza%TYPE) return number;
+                       pDatumVissza Kolcsonzesek.DatumVissza%TYPE) return number;*/
 
     -- Megnezi, hogy ket datumintervallum metszi-e egymast. 1 ha igen, 0 ha nem.
     function datumMetszet(pElsoKezd Kolcsonzesek.DatumKi%TYPE,
@@ -29,4 +29,6 @@ create or replace package kolcsonozPackage as
                                pKonyvId Konyvek.KonyvId%TYPE,
                                pDatumKi Kolcsonzesek.DatumKi%TYPE,
                                pDatumVissza Kolcsonzesek.DatumVissza%TYPE);
+    -- Kiirja a kovetkezo konyvet, ha letezik
+    procedure nextKonyv(pKid Kolcsonzo.Kid%TYPE);      
 end kolcsonozPackage;

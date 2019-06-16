@@ -108,4 +108,22 @@ create or replace package body kolcsonozPackage as
         insert into kolcsonzesek values (pKId, pKonyvId, pDatumKi, pDatumVissza, lErtek);
         dbms_output.put_line('Sikeresen beszurt a kolcsonzes tablaba');
     end beszurKolcsonzes;
+
+    -- Kiirja a kovetkezo konyvet, ha letezik
+    procedure nextKonyv(pKid Kolcsonzo.Kid%TYPE) 
+    is
+        vKonyvCount number;
+        vNextKNev varchar2(30);
+    begin
+        -- ellenorzi hogy a megadott id utan van-e sor az adatbazisban
+        -- ha nincs hibaval kilep
+        select count(*) into vKonyvCount from konyvek where KonyvID = (pKid + 1);
+        if (vKonyvCount = 0) then 
+            RAISE_APPLICATION_ERROR(-20000, 'nincs ilyen konyv');
+        end if;
+
+        -- lekri a kovetkezo konyvet es kiirja
+        select Kcim into vNextKNev from konyvek where KonyvId = (pKid + 1);
+        dbms_output.put_line(vNextKNev);
+    end nextKonyv;
 end kolcsonozPackage;
